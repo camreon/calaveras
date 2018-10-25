@@ -8,9 +8,11 @@ import os
 SCOPE = 'https://www.googleapis.com/auth/spreadsheets.readonly'
 API_KEY = os.environ['API_KEY']
 SPREADSHEET_ID = os.environ['SPREADSHEET_ID']
-RANGE_NAME = os.environ['RANGE_NAME']
+RANGE_NAME = os.environ['RANGE_NAME']  # should always be 'Form Responses!A2:E' if using the default sheet created by Google Forms
 
-# TODO: pull mad libs from sheet
+# madlibs are formatted as follows:
+#   - the text has sequential numbers wherever the user should fill in a word
+#   - the expected inputs are listed in order by their part of speech (the listed part of speech is displayed in the input form too)
 MADLIBS = [
     {
         'text': 'Eureka! But wait, I check Google. I discover—and ain’t it my luck— My concept’’s been done by a junior named “Dougal,” At 1, that smug little 2.',
