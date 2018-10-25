@@ -24,7 +24,7 @@ MADLIBS = [
     },
     {
         'text': 'One day, I had a thought: Right now 1 are hot. I pitched it to my team Who promptly killed my dream.',
-        'inputs': ['NOUNS']
+        'inputs': ['PLURAL NOUN']
     }
 ]
 
