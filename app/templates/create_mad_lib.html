@@ -1,5 +1,15 @@
 <!doctype html>
 
-<p><textarea placeholder="Fill in the blanks below:"></textarea></p>
+ <script type="text/javascript">var submitted=false;</script>
+ <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted)  {window.location='/submitted';}"></iframe>
 
-<p><button>Reveal</button></p>
+<h1>Fill in the blanks below to complete your calavera:</h1>
+
+<form action="/finish-mad-lib">
+    {% for input in expected_inputs %}
+        <input type="text" name="{{loop.index}}" placeholder="{{input}}" />
+        <br><br>
+    {% endfor %}
+    <input type="submit">
+</form>
+

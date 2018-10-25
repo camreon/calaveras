@@ -1,6 +1,8 @@
 <!doctype html>
 
-<h1>{{calavera}}</h1>
-<p>{{name}}, {{agency}}</p>
+{% if calavera %}
+  <h1>{{calavera}}</h1>
+  <p>{{name}}, {{agency}}</p>
+{% endif %}
 
 <a href="/create">Create your calavera</a>
